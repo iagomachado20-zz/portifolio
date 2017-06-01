@@ -1,0 +1,89 @@
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: $font;
+  color: #525252;
+  vertical-align: baseline;
+}
+* {box-sizing: border-box;}
+a[href^="tel"]{
+    color:inherit;
+    text-decoration:none;
+}
+article, aside, dialog, figure, footer, header, hgroup, nav, section, div {
+  display: block;
+}
+button, input[type="submit"], input[type="text"], select, input[type="checkbox"], input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  -khtml-appearance: none;
+  appearance: none; 
+  outline: none;
+}
+input[type="submit"], button {
+  cursor: pointer;
+  border: 0;
+  outline: none;
+}
+li, a, input {outline: none}
+body {
+  line-height: 1;
+  font-size: 10px;
+  background: $black;
+}
+ol,ul, li {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table, th, td {
+  vertical-align: middle;
+}
+
+blockquote before, blockquote after, q before, q after {
+  content: '';
+}
+
+a img {
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+.clearfix {
+  &:after {
+    clear: both;
+    display: block;
+    content: ''
+  }
+}
+.center {
+  margin: 0 auto;
+  position: relative;
+  @include breakpoint(laptop){
+    padding: 0 4%;
+    box-sizing: border-box;
+  }
+}
+.reset {
+  clear: both;
+  display: block;
+}
+.error {
+  color: #9a0000 !important;
+}

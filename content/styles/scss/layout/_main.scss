@@ -1,0 +1,245 @@
+.main-header {
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	position: fixed;
+	width: 100%;
+	left: 0;
+	z-index: 20;
+	.main-menu {
+		display: flex;
+		align-items: center;
+		height: 70px;
+		justify-content: space-around;
+		a {
+			text-transform: uppercase;
+			cursor: pointer;
+			color: rgba(255,255,255,0.8);
+			font-size: 1.7em;
+			font-weight: 100;
+			transition: all 0.4s ease;
+			&:hover {
+				color: white;
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+	.text {
+		margin: 0 auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		left: 0;
+		right: 0;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		text-transform: uppercase;
+		z-index: 5;
+		text-align: center;
+		-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: slide-top 2s 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+		color: white;
+		font-size: 10em;
+		text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+		line-height: 1.4;
+		h1 {
+			color: white;
+		}
+		strong {
+			font-size: 0.4em;
+			color: $blue;
+			line-height: 1;
+		}
+		.description {
+			font-size: 18px;
+			text-transform: none;
+			color: white;
+			margin-top: 15px;
+			font-weight: 100;
+			span {
+				color: $blue;
+				font-weight: 500;
+			}
+		}
+		.links {
+			line-height: 0.8;
+			text-align: center;
+			display: flex;
+    		margin: 25px 0;
+			a {
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				font-size: 22px;
+				margin: 0 5px;
+				border-radius: 100%;
+				color: white;
+				display: inline-block;
+				transition: all 0.5s ease;
+				background: transparent;
+				border: 1px solid white;
+				&.fa-linkedin {
+					&:hover {
+						background: #0077b5;
+					}
+				}
+				&.fa-github {
+					&:hover {
+						background: #24292e;
+					}
+				}
+				&.fa-envelope-o {
+					&:hover {
+						background: #cf4722;
+					}
+				}
+				&:hover {
+					border-color: transparent;
+					transform: scale(0.9);
+				}
+			}
+		}
+	}
+	.poster {
+		img {
+			width: 100%;
+			bottom: 0;
+			position: absolute;
+		}
+	}
+	.filter {
+		z-index: 100;
+		position: absolute;
+		background: rgba(0, 0, 0, 0.4);
+		width: 100%;
+	}
+	video {
+		position: absolute;
+		z-index: 0;
+		bottom: 0;
+		filter: grayscale(0.75);
+		&.fillWidth {
+			 width: 100%;
+		}
+	}
+}
+
+.skills {
+	padding: 60px 0;
+	text-align: center;
+	.title-area {
+		margin-bottom: 15px;
+	}
+	.list {
+		margin: 25px auto 0;
+		max-width: 800px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		li {
+			margin: 3px;
+			transition: all 0.3s ease;
+			cursor: pointer;
+			&:hover {
+				transform: scale(0.98);
+				opacity: 0.8;
+			}
+		}
+		img {
+			width: 150px;
+		}
+	}
+}
+
+.jobs {
+	padding: 60px 0 0px;
+	background: #2a2a2a;
+	text-align: center;
+	.list {
+		column-count: 4;
+		column-gap: 15px;
+		margin-top: 60px;
+		&:hover { 
+			li {
+				filter: blur(1px);
+				opacity: 0.5;
+			}
+		}
+		li {
+			padding: 15px;
+			border-radius: 5px;
+			background: #eaeaea;
+			width: 100%;
+			transition: all 0.5s ease-in;
+			-webkit-column-break-inside: avoid;
+			break-inside: avoid-column;
+			margin-bottom: 15px;
+			display: inline-block;
+			vertical-align: top;
+			&:hover {
+				filter: blur(0px);
+				opacity: 1;
+			}
+			img {
+				width: 100%;
+				display: block;
+				margin-bottom: 15px;
+			}
+			.title {
+				font-size: 2em;
+				text-transform: uppercase;
+				color: $blue;
+				line-height: 1.4em;
+				margin-bottom: 10px;
+			}
+			.description {
+				font-size: 1.4em;
+				line-height: 1.3em;
+				font-weight: 100;
+			}
+			.link {
+				margin-top: 15px;
+				height: 40px;
+				line-height: 40px;
+				background: $blue;
+				color: white;
+				display: inline-block;
+				border-radius: 30px;
+				font-size: 15px;
+				font-weight: 100;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.main-footer {
+	padding: 40px 0;
+	text-align: center;
+}

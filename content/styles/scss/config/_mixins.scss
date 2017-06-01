@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesome.eot');
+    src: url('../fonts/FontAwesome.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FontAwesome.woff') format('woff'),
+         url('../fonts/FontAwesome.ttf') format('truetype'),
+         url('../fonts/FontAwesome.svg') format('svg');
+}
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (max-width: 940px) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (max-width: 780px) { @content ; }
+  }
+   @else if $point == tablet {
+     @media (max-width: 640px)  { @content ; }
+  }
+  @else if $point == mobile {
+     @media (min-width: 520px)  { @content ; }
+  }
+}
+
