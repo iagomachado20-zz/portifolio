@@ -22,6 +22,15 @@
 			}
 		}
 	}
+	&.active {
+		background: black;
+		transition: background 0.5s ease;
+		.main-menu {
+			a:hover {
+				color: $blue;
+			}
+		}
+	}
 }
 
 .homepage-hero-module {
@@ -57,6 +66,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		font-family: 'Oswald';
 		flex-direction: column;
 		justify-content: center;
 		text-transform: uppercase;
@@ -70,6 +80,7 @@
 		line-height: 1.4;
 		h1 {
 			color: white;
+			font-family: 'Oswald';
 		}
 		strong {
 			font-size: 0.4em;
@@ -240,6 +251,61 @@
 }
 
 .main-footer {
-	padding: 40px 0;
-	text-align: center;
+	padding: 50px 0;
+	background: url(../images/urban.png) repeat-x left bottom;
+	.line-legal {
+		text-align: center;
+		padding: 15px 0;
+		background: black;
+		margin-top: 30px;
+		font-size: 13px;
+	}
+	.container {
+		max-width: 800px;
+		margin: 0 auto 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.map {
+			width: 60%;
+			iframe {
+				width: 100%;
+			}
+			.title-area {
+				margin-bottom: 30px;
+				text-align: left;
+				font-size: 3em;
+			}
+		}
+		.info {
+			text-align: left;
+			font-weight: 300;
+			width: 35%;
+			margin-top: 25px;
+			.block-text {
+				margin-bottom: 25px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid rgba(255,255,255,0.3);
+				p {
+					font-size: 16px;
+					line-height: 22px;
+					font-weight: 300;
+					margin-bottom: 15px;
+					color: rgba(255,255,255,0.7);
+				}
+			}
+			li {
+				padding: 15px 0;
+				color: rgba(255,255,255,0.7);
+				font-size: 16px;
+			}
+			.fa {
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			a {
+				color: rgba(255,255,255,0.7);
+			}
+		}
+	}
 }

@@ -185,3 +185,30 @@ if(e&&1===a.nodeType)while(c=e[d++])a.removeAttribute(c)}}),hb={set:function(a,b
         }
     });
 });
+var structure = {
+    init: function() {
+        this.sticky();
+    },
+    sticky: function() {
+        var heightHeader = $('.main-header').height();
+
+        $(window).scroll(function(){
+
+            var position = $('body').scrollTop();
+
+            if (position > heightHeader) {
+                $('.main-header').addClass('active');
+            }
+            else {
+                $('.main-header').removeClass('active');
+            }
+
+        });
+        
+    }
+};
+
+
+jQuery(function(){
+    structure.init();
+});
