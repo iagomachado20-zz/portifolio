@@ -73,7 +73,7 @@
 		z-index: 5;
 		text-align: center;
 		-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	    animation: slide-top 2s 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: slide-top 3s 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 		color: white;
 		font-size: 10em;
 		text-shadow: 3px 3px 3px rgba(0,0,0,0.1);
@@ -81,6 +81,12 @@
 		h1 {
 			color: white;
 			font-family: 'Oswald';
+		}
+		.avatar {
+			width: 150px;
+			height: 150px;
+			border-radius: 100%;
+			border: 5px solid rgba(0,0,0,0.2);
 		}
 		strong {
 			font-size: 0.4em;
@@ -204,7 +210,6 @@
 		}
 		li {
 			padding: 15px;
-			border-radius: 5px;
 			background: #eaeaea;
 			width: 100%;
 			transition: all 0.5s ease-in;
